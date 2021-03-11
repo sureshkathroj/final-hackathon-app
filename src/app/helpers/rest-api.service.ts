@@ -12,7 +12,11 @@ export class RestApiService {
   constructor(
     protected httpClient: HttpClient
   ) { }
+    private baseURL = "http://localhost:3000/";
 
+    getFavourites () {
+      return this.httpClient.get(`${this.baseURL}beneficiaries`)
+    }
   protected getMethod(endPointUrl: string, baseParam: Action, httpOptions: {}): Observable<any> {
     return this.httpClient.get(`${endPointUrl}${baseParam.url}`, { ...httpOptions })
       .pipe(map(res => this.handleResponse(res)), catchError(error => this.handleHttpError('get', error)));
