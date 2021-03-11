@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
 import { ApiInterceptor } from './helpers/api.interceptor';
+import { CommonMaterialModule } from './materials/common-material.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ApiInterceptor } from './helpers/api.interceptor';
     AppRoutingModule,
     BrowserAnimationsModule,
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    CommonMaterialModule
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,
