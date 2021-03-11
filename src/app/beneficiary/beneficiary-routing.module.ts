@@ -19,6 +19,10 @@ const routes: Routes = [
       }, {
         path: 'edit',
         component: EditBenficairiesComponent
+      },
+      {
+        path: '',
+        component: SummaryBeneficiaryComponent
       }
     ]
   }];
