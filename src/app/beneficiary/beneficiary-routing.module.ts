@@ -17,7 +17,7 @@ const routes: Routes = [
         path: 'add',
         component: NewBeneficairiesComponent
       }, {
-        path: 'edit',
+        path: 'edit/:id',
         component: EditBenficairiesComponent
       },
       {
